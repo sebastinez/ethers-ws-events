@@ -12,7 +12,7 @@ pub async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let address = "0x797Ff53d759e80193c91ACd486E7742a271DD23E".parse::<Address>()?;
 
     // Connecting to open Websocket Server, polling every 7 seconds
-    let ws = Ws::connect("ws://localhost:8546").await?;
+    let ws = Ws::connect("wss://eth-rinkeby.alchemyapi.io/v2/kDrRDlb08tM1dGlz5pUi-Max0B3gYOUZ").await?;
 
     // Instantiating new Provider
     let client = Provider::new(ws);
